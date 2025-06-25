@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>R Uday Sri Kumar's Portfolio - Skills</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,110 +12,123 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-
         body {
-            background-color: rgb(0, 0, 35);
+            background-color: #000023;
             color: white;
             font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
         }
-
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             height: 80px;
-            background-color: rgb(19, 19, 78);
+            background-color: #13134e;
+            padding: 0 50px;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
         }
-
         nav ul {
             display: flex;
             justify-content: center;
         }
-
         nav ul li {
             list-style: none;
-            margin: 0 23px;
+            margin: 0 20px;
         }
-
         nav ul li a {
             text-decoration: none;
             color: white;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
-
         nav ul li a:hover {
-            color: rgb(158, 158, 232);
-            font-size: 1.02rem;
-
+            color: #9e9ee8;
         }
-
         .left {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 700;
         }
-
         .firstsection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 80px 0;
-
+            min-height: 100vh;
+            padding: 100px 50px;
+            background: linear-gradient(45deg, #000023, #1c1c6b);
+            text-align: center;
         }
-
-        .firstsection>div {
-            width: 40%;
-
+        .firstsection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
         }
-
-        .leftsection {
-            font-size: 1.5rem;
-
-        }
-
-        .rightsection img {
-            width: 80%;
-        }
-
         .purple {
-            color: rgb(172, 120, 220);
+            color: #ac78dc;
         }
-
-        #element {
-            color: rgb(172, 120, 220);
-        }
-        .secondsection{
+        .skills-grid {
             max-width: 80vw;
-            margin: auto;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
-        .centerdiv{
-            height: 10vh;
+        .skill-card {
+            background: #13134e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .skill-card p {
+            font-size: 1rem;
+            color: #d3d3d3;
+        }
+        .centerdiv {
             display: flex;
             justify-content: center;
-            align-items:center;
-            font-size: 60px;
-            color: aliceblue;
-
-        a{
+            align-items: center;
+            padding: 20px;
+            gap: 15px;
+        }
+        .centerdiv a {
             color: white;
-            height: 100px;
-            width: 100px;
-            background-color: rgb(172, 120, 220);
-            border-radius: 50px;
-            text-align: center;
-            transition: all 0.3s linear;
+            font-size: 1.5rem;
+            background-color: #ac78dc;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-       
+        .centerdiv a:hover {
+            background-color: #9e9ee8;
+            transform: scale(1.1);
         }
-        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
-
 <body>
     <header>
         <nav>
             <div class="left">R Uday Sri Kumar's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="webdevlopment.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="skills.html">Skills</a></li>
                     <li><a href="education.html">Education</a></li>
@@ -125,37 +137,51 @@
             </div>
         </nav>
     </header>
-
-
     <main>
         <section class="firstsection">
-            <div class="leftsection">
-                <span class="purple"><b>Skills</b></span>
-                <div>
-                   <ol>
-                    My diverse technical skill set includes expertise in:
-                    <li><span class="purple">Programming Languages:</span>C, Java</li>
-                    <li><span class="purple">Web Technologies:</span>HTML,CSS,JS</li>
-                    <li><span class="purple">Productivity Tools:</span>Proficient in the use of Microsoft Office suite</li>
-                   </ol>
+            <h1><span class="purple">Skills</span></h1>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <p>Java, C, C++, Python, JavaScript, PHP</p>
                 </div>
-                <span id="element"></span>
+                <div class="skill-card">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, React, Node.js, Flask, phpMyAdmin</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Mobile Development</h3>
+                    <p>React Native</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Databases</h3>
+                    <p>MySQL, MongoDB</p>
+                </div>
+                <div class="skill-card">
+                    <h3>AI & ML</h3>
+                    <p>NLP, TensorFlow, PyTorch, Groq API</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools & Platforms</h3>
+                    <p>Git, GitHub, Figma, ProjectLibre, MS Office</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Other Technologies</h3>
+                    <p>OOP, RESTful APIs, Speech Recognition, Blockchain</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Soft Skills</h3>
+                    <p>Agile Methodology, English Proficiency</p>
+                </div>
             </div>
-            <div class="rightsection">
-                <img src="skills.png" alt="">   
-            </div>
-        </section>
-        <section class="secondsection">
-        
         </section>
     </main>
-  
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['A Tech Maven in the Making!'],
-            typeSpeed: 50,
-        });
-    </script>
+    <div class="centerdiv">
+        <a href="https://www.instagram.com/urs_udaysrikumar9/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://twitter.com/RUdaySriKumar1" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.facebook.com/ravilla.udaysrikumar.1/" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/r-uday-sri-kumar-359419257/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/RUDAY2004" target="_blank"><i class="fa fa-github"></i></a>
+    </div>
 </body>
-
 </html>

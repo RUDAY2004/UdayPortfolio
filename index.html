@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>R Uday Sri Kumar's Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,18 +12,24 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         body {
-            background-color: rgb(0, 0, 35);
+            background-color: #000023;
             color: white;
             font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
         }
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             height: 80px;
-            background-color: rgb(19, 19, 78);
+            background-color: #13134e;
+            padding: 0 50px;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
         }
         nav ul {
             display: flex;
@@ -32,64 +37,129 @@
         }
         nav ul li {
             list-style: none;
-            margin: 0 23px;
+            margin: 0 20px;
         }
         nav ul li a {
             text-decoration: none;
             color: white;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
         nav ul li a:hover {
-            color: rgb(158, 158, 232);
-            font-size: 1.02rem;
+            color: #9e9ee8;
         }
         .left {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 700;
         }
         .firstsection {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin: 80px 0;
+            min-height: 100vh;
+            padding: 100px 50px;
+            background: linear-gradient(45deg, #000023, #1c1c6b);
         }
-        .firstsection>div {
-            width: 40%;
+        .firstsection > div {
+            width: 45%;
         }
         .leftsection {
             font-size: 2.5rem;
+            animation: fadeInLeft 1s ease-out;
+        }
+        .leftsection p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #d3d3d3;
         }
         .rightsection img {
-            width: 80%;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            animation: fadeInRight 1s ease-out;
         }
-
         .purple {
-            color: rgb(232, 232, 232);
+            color: #ac78dc;
         }
-
         #element {
-            color: rgb(119, 31, 202);
+            color: #ac78dc;
+            font-weight: 600;
         }
-        .secondsection{
+        .secondsection {
             max-width: 80vw;
-            margin: auto;
+            margin: 50px auto;
+            padding: 20px;
         }
-        .centerdiv{
-            height: 20vh;
+        .secondsection h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #13134e;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .project-card p {
+            font-size: 1rem;
+            color: #d3d3d3;
+        }
+        .project-card a {
+            color: #ac78dc;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .centerdiv {
             display: flex;
             justify-content: center;
-            align-items:center;
-            font-size: 30px;
-            color: aliceblue;
-            width: 100%;
-        a{
-            color: white;
-            height: 0px;
-            width: 70px;
-            background-color: rgb(172, 120, 220);
-            border-radius: 30px;
-            text-align: center;
-            transition: all 0.3s linear;
+            align-items: center;
+            padding: 20px;
+            gap: 15px;
         }
-        } 
+        .centerdiv a {
+            color: white;
+            font-size: 1.5rem;
+            background-color: #ac78dc;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .centerdiv a:hover {
+            background-color: #9e9ee8;
+            transform: scale(1.1);
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -98,7 +168,7 @@
             <div class="left">R Uday Sri Kumar's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="webdevlopment.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="skills.html">Skills</a></li>
                     <li><a href="education.html">Education</a></li>
@@ -110,39 +180,56 @@
     <main>
         <section class="firstsection">
             <div class="leftsection">
-                Hi, This is <span class="purple">Uday Sri Kumar</span>
-                <div>Tech Explorer</div>
+                Hi, I'm <span class="purple">R Uday Sri Kumar</span>
+                <div>Full-Stack Developer & AI Enthusiast</div>
+                <p>Final-year B.Tech student at Manipal Institute of Technology, passionate about building innovative web and mobile solutions with expertise in AI, blockchain, and real-time systems.</p>
                 <span id="element"></span>
             </div>
             <div class="rightsection">
-                <img src="bg.png" alt="">
-
+                <img src="bg.png" alt="Profile Image">
             </div>
         </section>
         <section class="secondsection">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>BharatVerify</h3>
+                    <p>Secure voting verification system with biometric authentication and blockchain. Built with React, Node.js, MongoDB, and Gemini AI.</p>
+                    <a href="https://bharatverify.vercel.app/" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Go Metro</h3>
+                    <p>Urban metro navigation platform with real-time updates and user management. Built with HTML, CSS, JavaScript, PHP, and MySQL.</p>
+                    <a href="https://ruday2004.github.io/labproject/" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Flipkart Grid AI</h3>
+                    <p>AI-powered seller interaction simulator with voice recognition and multilingual support. Built with Flask and Groq API.</p>
+                    <a href="https://github.com/RUDAY2004/flipkart-ai-seller-assistant" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Roommate Finder</h3>
+                    <p>Mobile app for finding compatible roommates with real-time chat. Built with React Native, Node.js, and MongoDB.</p>
+                    <a href="https://github.com/RUDAY2004/Roommate-finder" target="_blank">View Project</a>
+                </div>
+            </div>
         </section>
     </main>
+    <div class="centerdiv">
+        <a href="https://www.instagram.com/urs_udaysrikumar9/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://twitter.com/RUdaySriKumar1" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.facebook.com/ravilla.udaysrikumar.1/" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/r-uday-sri-kumar-359419257/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/RUDAY2004" target="_blank"><i class="fa fa-github"></i></a>
+    </div>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
     <script>
         var typed = new Typed('#element', {
-            strings: ['A Tech Maven in the Making!'],
+            strings: ['A Tech Maven in the Making!', 'Building the Future with Code', 'AI & Web Development Enthusiast'],
             typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
         });
     </script>
-    <div class="centerdiv">
-        <a href="https://www.instagram.com/urs_udaysrikumar9/">
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-    </a>
-    <a href="https://twitter.com/RUdaySriKumar1">
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-    </a>
-    <a href="https://www.facebook.com/ravilla.udaysrikumar.1/">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/r-uday-sri-kumar-359419257/">
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-    </a>
-        </div>
 </body>
-</html>
+</html> 
